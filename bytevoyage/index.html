@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>ByteVoyage - Smart Download Calculator & Speed Test Suite</title>
+    <meta name="title" content="ByteVoyage - Smart Download Calculator & Speed Test Suite">
+    <meta name="description" content="Professional-grade download time calculator and internet speed test. Get accurate measurements, real-time analytics, and optimization recommendations.">
+    <meta name="keywords" content="download calculator, speed test, internet speed, bandwidth test, network speed, upload speed, download speed, internet tools">
+    <meta name="author" content="ByteVoyage">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="English">
+    <meta name="generator" content="ByteVoyage">
+    <meta name="rating" content="General">
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="notranslate">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bytevoyage.com/">
+    <meta property="og:title" content="ByteVoyage - Professional Internet Speed Analytics">
+    <meta property="og:description" content="Professional-grade download time calculator and internet speed test. Get accurate measurements, real-time analytics, and optimization recommendations.">
+    <meta property="og:image" content="/api/placeholder/1200/630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="ByteVoyage">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bytevoyage">
+    <meta name="twitter:creator" content="@bytevoyage">
+    <meta name="twitter:url" content="https://bytevoyage.com/">
+    <meta name="twitter:title" content="ByteVoyage - Professional Internet Speed Analytics">
+    <meta name="twitter:description" content="Professional-grade download time calculator and internet speed test. Get accurate measurements, real-time analytics, and optimization recommendations.">
+    <meta name="twitter:image" content="/api/placeholder/1200/600">
+    
+    <!-- Apple Specific -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ByteVoyage">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Microsoft -->
+    <meta name="msapplication-TileColor" content="#1a1a1a">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="theme-color" content="#1a1a1a">
+    
+    <!-- PWA Support -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/api/placeholder/32/32">
+    <link rel="icon" type="image/png" sizes="16x16" href="/api/placeholder/16/16">
+    <link rel="apple-touch-icon" sizes="180x180" href="/api/placeholder/180/180">
+    <link rel="mask-icon" href="/api/placeholder/32/32" color="#1a1a1a">
+    
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical CSS -->
+    <style>
+        /* Inline critical CSS here */
+        :root {
+            --primary-hue: 220;
+            --error-hue: 0;
+            --success-hue: 120;
+        }
+    </style>
+    
+    <!-- Deferred CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <style>
+        /* Base Styles */
+        :root {
+            /* Light Theme */
+            --light-bg-primary: hsl(var(--primary-hue), 20%, 98%);
+            --light-bg-secondary: hsl(var(--primary-hue), 20%, 95%);
+            --light-text-primary: hsl(var(--primary-hue), 20%, 10%);
+            --light-text-secondary: hsl(var(--primary-hue), 15%, 35%);
+            --light-border: hsl(var(--primary-hue), 20%, 90%);
+            --light-accent: hsl(354, 70%, 54%);
+
+            /* Dark Theme */
+            --dark-bg-primary: hsl(var(--primary-hue), 15%, 10%);
+            --dark-bg-secondary: hsl(var(--primary-hue), 15%, 15%);
+            --dark-text-primary: hsl(var(--primary-hue), 15%, 90%);
+            --dark-text-secondary: hsl(var(--primary-hue), 10%, 75%);
+            --dark-border: hsl(var(--primary-hue), 15%, 25%);
+            --dark-accent: hsl(354, 65%, 62%);
+        }
+
+        /* Theme Specific */
+        [data-theme="light"] {
+            --bg-primary: var(--light-bg-primary);
+            --bg-secondary: var(--light-bg-secondary);
+            --text-primary: var(--light-text-primary);
+            --text-secondary: var(--light-text-secondary);
+            --border-color: var(--light-border);
+            --accent-color: var(--light-accent);
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: var(--dark-bg-primary);
+            --bg-secondary: var(--dark-bg-secondary);
+            --text-primary: var(--dark-text-primary);
+            --text-secondary: var(--dark-text-secondary);
+            --border-color: var(--dark-border);
+            --accent-color: var(--dark-accent);
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animate-slide-in {
+            animation: slideIn 0.5s ease-out forwards;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 640px) {
+            .mobile-optimize {
+                padding: 1rem !important;
+                margin: 0.5rem !important;
+            }
+
+            .mobile-text {
+                font-size: 0.875rem !important;
+            }
+
+            .mobile-stack {
+                flex-direction: column !important;
+            }
+        }
+
+        /* Performance Optimizations */
+        .content-visibility-auto {
+            content-visibility: auto;
+            contain-intrinsic-size: 0 500px;
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* High Contrast Mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --light-text-primary: black;
+                --dark-text-primary: white;
+                --accent-color: blue;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen theme-transition" data-theme="light">
+    <!-- App Shell -->
+    <div id="app" class="min-h-screen bg-gradient-to-br from-bg-primary to-bg-secondary text-text-primary">
+        <!-- Header Component -->
+        <header class="fixed top-0 w-full backdrop-blur-md bg-bg-primary/90 z-50 shadow-lg">
+            <!-- Header content -->
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 pt-20 pb-16">
+            <!-- Content sections -->
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-bg-secondary text-text-secondary py-8">
+            <!-- Footer content -->
+        </footer>
+
+        <!-- Mobile Navigation -->
+        <nav class="fixed bottom-0 left-0 right-0 bg-bg-primary border-t border-border-color md:hidden">
+            <!-- Mobile nav content -->
+        </nav>
+
+        <!-- Floating Action Buttons -->
+        <div class="fixed bottom-4 right-4 flex flex-col gap-2">
+            <button id="themeToggle" class="p-3 rounded-full bg-accent-color text-white shadow-lg">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="scrollTop" class="p-3 rounded-full bg-accent-color text-white shadow-lg hidden">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+
+        <!-- Toast Container -->
+        <div id="toastContainer" class="fixed bottom-4 left-4 flex flex-col gap-2 z-50">
+            <!-- Toast messages will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Deferred Scripts -->
+    <script type="module">
+        // Core functionality
+        import { initializeApp } from './js/app.js';
+        import { setupTheme } from './js/theme.js';
+        import { setupAnalytics } from './js/analytics.js';
+
+        // Initialize app with performance monitoring
+        performance.mark('app-start');
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeApp();
+            setupTheme();
+            setupAnalytics();
+            
+            performance.mark('app-loaded');
+            performance.measure('app-initialization', 'app-start', 'app-loaded');
+        });
+
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('ServiceWorker registered');
+                })
+                .catch(error => {
+                    console.error('ServiceWorker registration failed:', error);
+                });
+        }
+
+        // Error Boundary
+        window.onerror = (message, source, lineno, colno, error) => {
+            console.error('Global error:', { message, source, lineno, colno, error });
+            showToast('An error occurred. Please try again.', 'error');
+        };
+
+        // Performance Monitoring
+        const observer = new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+                console.log('Performance:', entry.name, entry.duration);
+            }
+        });
+
+        observer.observe({ entryTypes: ['measure', 'paint'] });
+    </script>
+
+    <!-- Fallback Alert -->
+    <noscript>
+        <div class="fixed inset-0 bg-bg-primary text-text-primary flex items-center justify-center">
+            <div class="text-center p-4">
+                <h1 class="text-2xl font-bold mb-4">JavaScript Required</h1>
+                <p>Please enable JavaScript to use ByteVoyage.</p>
+            </div>
+        </div>
+    </noscript>
+</body>
+</html>
